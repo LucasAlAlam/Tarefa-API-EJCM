@@ -1,7 +1,9 @@
+import { Contato } from "./Contato";
+
 const DataTypes = require("sequelize");
 const sequelize = require("../config/sequelize");
 
-export const Usuario = sequelize.define('Usuario', {
+const Usuario = sequelize.define('Usuario', {
     email:{
         type: DataTypes.STRING,
         allowNull: false,
@@ -29,5 +31,11 @@ export const Usuario = sequelize.define('Usuario', {
     },
     hash:{
         type: DataTypes.STRING
-    },
+    }
 });
+
+Usuario.associate = (models) => {
+    Usuario.hasMany(models.Contato);
+}
+
+module.exports = Usuario
