@@ -2,9 +2,14 @@
   "name": "tarefa-api-ejcm",
   "version": "1.0.0",
   "description": "Desenvolvimento de uma API para um marketplace de venda de produtos eletrônicos",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "node-dev --no-notify server.js",
+    "migrate": "node src/database/migrate.js",
+    "seed": "node src/database/seeders/seeder.js",
+    "keys": "node scr/config/generateKeys.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/LucasAlAlam/Tarefa-API-EJCM/issues"
   },
-  "homepage": "https://github.com/LucasAlAlam/Tarefa-API-EJCM#readme"
+  "homepage": "https://github.com/LucasAlAlam/Tarefa-API-EJCM#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "node-dev": "^8.0.0",
+    "sequelize": "^6.32.1"
+  }
 }
