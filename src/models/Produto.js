@@ -2,6 +2,12 @@ const DataTypes = require('sequelize');
 const sequelize = require('../config/sequelize');
 
 const Produto = sequelize.define('Produto', {
+    // idProduto: {
+    //     type: DataTypes.INTEGER,
+    //     primaryKey: true,
+    //     autoIncrement: true,
+    //     unique: true,
+    // },
     imagem:{
         type: DataTypes.STRING,
     },
@@ -35,5 +41,17 @@ const Produto = sequelize.define('Produto', {
 });
 
 Produto.associate = (models) => {
-    Produto.hasOne(models.Vendedor);
+    Produto.belongsTo(models.Vendedor);
+    Produto.belongsToMany(models.Cliente, {
+        through: 'Compra',
+        as: 'idCompraProduto',
+        foreignKey: 'idProduto'
+    })
+    Produto.belongsToMany(models.Cliente, {
+        through: 'Deseja',
+        as: 'idDesejoProduto',
+        foreignKey: 'idProduto'
+    })
 }
+
+module.exports = Produto;

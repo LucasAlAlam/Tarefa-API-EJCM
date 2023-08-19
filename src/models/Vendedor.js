@@ -14,7 +14,8 @@ const Vendedor = sequelize.define('Vendedor', {
 });
 
 Vendedor.associate = (models) => {
-    Vendedor.hasOne(models.Usuario)
+    Vendedor.belongsTo(models.Usuario);
+    Vendedor.hasMany(models.Produto);
 };
 
 module.exports = Vendedor;

@@ -1,7 +1,7 @@
 const DataTypes = require("sequelize");
 const sequelize = require("../config/sequelize");
 
-export const Contato = sequelize.define('Contato', {
+const Contato = sequelize.define('Contato', {
     codPais:{
         type: DataTypes.INTEGER,
         defaultValue: 55,
@@ -27,7 +27,7 @@ export const Contato = sequelize.define('Contato', {
 });
 
 Contato.associate = (models) => {
-    Contato.hasOne(models.Usuario);
+    Contato.belongsTo(models.Usuario);
 };
 
 module.exports = Contato;

@@ -14,7 +14,17 @@ const Cliente = sequelize.define('Cliente', {
 });
 
 Cliente.associate = (models) => {
-    Cliente.hasOne(models.Usuario);
-}
+    Cliente.belongsTo(models.Usuario);
+    Cliente.belongsToMany(models.Produto, { 
+        through: 'Compra',
+        as: 'idCompraCliente',
+        foreignKey: 'idCliente'
+    });
+    Cliente.belongsToMany(models.Produto, {
+        through: 'Deseja',
+        as: 'idDesejoCliente',
+        foreignKey: 'idCliente'
+    });
+};
 
 module.exports = Cliente;
