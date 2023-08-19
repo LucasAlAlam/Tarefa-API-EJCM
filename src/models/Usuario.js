@@ -1,5 +1,3 @@
-import { Contato } from "./Contato";
-
 const DataTypes = require("sequelize");
 const sequelize = require("../config/sequelize");
 
@@ -36,6 +34,6 @@ const Usuario = sequelize.define('Usuario', {
 
 Usuario.associate = (models) => {
     Usuario.hasMany(models.Contato);
-}
+};
 
-module.exports = Usuario
+module.exports = Usuario;
