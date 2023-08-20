@@ -32,10 +32,10 @@ const show = async (req, res) => {
 const update = async (req, res) => { 
     const {id} = req.params;
     try {
-        const updated = await modelUsuario.update(req.body, {where: {id: id}});
+        const [updated] = await modelUsuario.update(req.body, {where: {id: id}});
         if (updated) {
             const user = await modelUsuario.findByPk(id);
-            res.status(200).send(user)
+            return res.status(200).send(user);
         } else
             throw new Error();
     } catch (err) {
