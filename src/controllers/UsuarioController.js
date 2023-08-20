@@ -3,9 +3,9 @@ const modelUsuario = require('../models/Usuario');
 async function create (req, res) {
     try {
         const user = await modelUsuario.create(req.body);
-        return res.status(201).json({ message: 'Usuário cadastrado com sucesso', user: user });
+        return res.status(201).json({ message: 'Usuário cadastrado com sucesso', modelUsuario: user });
     } catch (err) {
-        res.status(500).json({ error: err });
+        return res.status(500).json({ error: err });
     }
 };
 const index = async (req, res) => {
