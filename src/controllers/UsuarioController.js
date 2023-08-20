@@ -1,9 +1,8 @@
 const modelUsuario = require('../models/Usuario');
 
-const create = async (req, res) => {
-    const newUser = (req.body);
+async function create (req, res) {
     try {
-        const user = await modelUsuario.create(newUser);
+        const user = await modelUsuario.create(req.body);
         return res.status(201).json({ message: 'Usuário cadastrado com sucesso', user: user });
     } catch (err) {
         res.status(500).json({ error: err });

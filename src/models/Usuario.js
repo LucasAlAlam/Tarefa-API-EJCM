@@ -8,7 +8,7 @@ const Usuario = sequelize.define('Usuario', {
         unique: true,
         validate: {
             isEmail: true,
-            msg: 'O email informado não corresponde ao formato padrão.'
+            //msg: 'O email informado não corresponde ao formato padrão.'
         }
     },
     cep:{
@@ -21,7 +21,7 @@ const Usuario = sequelize.define('Usuario', {
         type: DataTypes.INTEGER,
         validate: {
             isNumeric: true,
-            msg: 'Deve ser informado apenas números para numeroCasa.'
+            //msg: 'Deve ser informado apenas números para numeroCasa.'
         }
     },
     salt:{
