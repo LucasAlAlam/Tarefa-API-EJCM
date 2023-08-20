@@ -17,4 +17,13 @@ router.get('/produto/:id', produtoController.show);
 router.put('/produto/:id', produtoController.update);
 router.delete('/produto/:id', produtoController.destroy);
 
+const contatoController = require ('../controllers/ContatoController')
+
+router.post('/contato', contatoController.create);
+router.get('/contato', contatoController.index);
+router.get('/contato/:id', contatoController.show);
+router.put('/contato/:id', contatoController.update);
+router.delete('/contato/:id', contatoController.destroy);
+router.put('/usuario/:usuarioId/contato/:contatoId', contatoController.relUserContato);
+
 module.exports = router;
