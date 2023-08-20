@@ -12,7 +12,7 @@ const index = async (req, res) => {
     try {
         const user = await modelUsuario.findAll();
         return res.status(200).json({ user });
-    } catch {
+    } catch (err) {
         return res.status(500).json({ error:err })
     }
 };
@@ -24,7 +24,7 @@ const show = async (req, res) => {
             return res.status(200).json({ user });
         else
             return res.status(200).json({ message: 'Usuário não encontrado' });
-    } catch {
+    } catch (err) {
         return res.status(500).json({ error: err })
     }
 };
@@ -50,7 +50,7 @@ const destroy = async (req, res) => {
             return res.status(200).send('Usuário deletado com sucesso.')
         } else
             throw new Error();
-    } catch (error) {
+    } catch (err) {
         return res.status(500).json({error:err});
     }
 };
