@@ -5,24 +5,19 @@ const Cliente = sequelize.define('Cliente', {
     nomeCompleto: {
         type: DataTypes.STRING,
         allowNull: false,
-        validate: {
-            notNull: {
-                msg: 'Deve ser informado um nome para o cadastro.',
-            }
-        }
     }
 });
 
 Cliente.associate = (models) => {
     Cliente.belongsTo(models.Usuario);
     Cliente.belongsToMany(models.Produto, { 
-        through: 'Compra',
-        as: 'idCompraCliente',
+        through: 'Compras',
+        as: 'Comprou',
         foreignKey: 'idCliente'
     });
     Cliente.belongsToMany(models.Produto, {
         through: 'Deseja',
-        as: 'idDesejoCliente',
+        as: 'Desejo',
         foreignKey: 'idCliente'
     });
 };

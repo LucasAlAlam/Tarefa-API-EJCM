@@ -1,6 +1,6 @@
 const DataTypes = require('sequelize');
 const sequelize = require('../config/sequelize');
 
-const Compra = sequelize.define('Compras', {});
+const Deseja = sequelize.define('Deseja', {});
 
-module.exports = Compra;
+module.export = Deseja;

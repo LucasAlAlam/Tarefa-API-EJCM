@@ -27,13 +27,13 @@ const Produto = sequelize.define('Produto', {
 Produto.associate = (models) => {
     Produto.belongsTo(models.Vendedor);
     Produto.belongsToMany(models.Cliente, {
-        through: 'Compra',
-        as: 'idCompraProduto',
+        through: 'Compras',
+        as: 'Comprado',
         foreignKey: 'idProduto'
     })
     Produto.belongsToMany(models.Cliente, {
         through: 'Deseja',
-        as: 'idDesejoProduto',
+        as: 'Desejado',
         foreignKey: 'idProduto'
     })
 }

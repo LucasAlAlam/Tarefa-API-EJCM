@@ -7,8 +7,7 @@ const Vendedor = sequelize.define('Vendedor', {
         allowNull: false,
         unique: true,
         validate: {
-            is: /\d{2}.\d{3}.\d{3}\/[0]{3}[1-2]-\d{2}/,
-            msg: 'O cnpj informado possui inconsistências.'
+            is: /\d{2}.\d{3}.\d{3}\/[0]{3}[1-2]-\d{2}/
         }
     }
 });
