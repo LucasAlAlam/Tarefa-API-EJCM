@@ -1,0 +1,985 @@
+{
+	"info": {
+		"_postman_id": "5dd02a50-7113-4b77-b141-e153d04ab344",
+		"name": "TT-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28170985"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "createUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "asdcc@dkajnkjc.com",
+									"type": "text"
+								},
+								{
+									"key": "cep",
+									"value": "12345-678",
+									"type": "text"
+								},
+								{
+									"key": "numeroCasa",
+									"value": "45",
+									"type": "text"
+								},
+								{
+									"key": "salt",
+									"value": "84ncr24",
+									"type": "text"
+								},
+								{
+									"key": "hash",
+									"value": "92849cu294m8",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.0.139:3333/usuario",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "testValidation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "asdcascdsa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.0.139:3333/usuario",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "indexUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/usuario",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"usuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/usuario/?id=1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"usuario",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "lucas@email.com",
+									"type": "text"
+								},
+								{
+									"key": "cep",
+									"value": "98765-432",
+									"type": "text"
+								},
+								{
+									"key": "numeroCasa",
+									"value": "98",
+									"type": "text"
+								},
+								{
+									"key": "hash",
+									"value": "89324n9nvc2",
+									"type": "text"
+								},
+								{
+									"key": "salt",
+									"value": "cm2984r92",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.0.139:3333/usuario/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.0.139:3333/usuario/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produtos",
+			"item": [
+				{
+					"name": "createProduto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nome",
+									"value": "Computador Dell i7 8GB RAM",
+									"type": "text"
+								},
+								{
+									"key": "valor",
+									"value": "5648.69",
+									"type": "text"
+								},
+								{
+									"key": "quantidadeEstoque",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.0.139:3333/produto",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "indexProduto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/produto",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"produto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showProduto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/produto/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"produto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProduto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nome",
+									"value": "Notebook Lenovo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.0.139:3333/produto/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"produto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProduto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/produto/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"produto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "relVendedorProduto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/vendedor/1/produto/2",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"vendedor",
+								"1",
+								"produto",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeVendedorProduto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/produto/remove_vendedor/2",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"produto",
+								"remove_vendedor",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contato",
+			"item": [
+				{
+					"name": "createContato",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "codArea",
+									"value": "51",
+									"type": "text"
+								},
+								{
+									"key": "numero",
+									"value": "986453215",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.0.139:3333/contato",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"contato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "relContatoUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/usuario/2/contato/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"usuario",
+								"2",
+								"contato",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "indexContato",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/contato",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"contato"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putContato",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "codArea",
+									"value": "21",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.0.139:3333/contato/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"contato",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteContato",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/contato/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"contato",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "createCliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nomeCompleto",
+									"value": "lucas al alam ribeiro silveira",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.0.139:3333/cliente",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "relClienteUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/usuario/2/cliente/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"usuario",
+								"2",
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "indexCliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/cliente",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showCliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/cliente/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "putCliente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nomeCompleto",
+									"value": "woijfoiwon akjdnckja",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.0.139:3333/cliente/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/cliente/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"cliente",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addCarrinho",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://192.168.0.139:3333/Deseja/2/2",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"Deseja",
+								"2",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "compra",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://192.168.0.139:3333/cliente/1/compra/produto/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"cliente",
+								"1",
+								"compra",
+								"produto",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Vendedor",
+			"item": [
+				{
+					"name": "createVendedor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "cnpj",
+									"value": "97.908.124/0001-01",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.0.139:3333/vendedor",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"vendedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "relVendedorUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/usuario/2/vendedor/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"usuario",
+								"2",
+								"vendedor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "indexVendedor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/vendedor",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"vendedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "showVendedor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/vendedor/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"vendedor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateVendedor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "cnpj",
+									"value": "93.063.924/0001-18",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://192.168.0.139:3333/vendedor/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"vendedor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteVendedor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://192.168.0.139:3333/vendedor/1",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"139"
+							],
+							"port": "3333",
+							"path": [
+								"vendedor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HelloWorld",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.0.139:3333/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"139"
+					],
+					"port": "3333",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
